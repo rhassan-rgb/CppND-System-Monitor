@@ -273,7 +273,7 @@ string LinuxParser::Command(int pid) {
 }
 
 // DONE: Read and return the memory used by a process
-string LinuxParser::Ram(int pid [[maybe_unused]]) {
+string LinuxParser::Ram(int pid) {
   std::ifstream runningProcessFile(
       kProcDirectory + to_string(pid) + kStatusFilename, std::ios::in);
   string vMem;
